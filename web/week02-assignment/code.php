@@ -1,6 +1,7 @@
 <?php
 
 
+if(isset($_POST['subimit'])){
 // that will store the name of the user
 $name = $_POST['name'];
 
@@ -13,7 +14,7 @@ $message = $_POST['message'];
 // That will send the email wherever I want
 $email_from = "coelho_ll22@icloud.com";
 
-$email_subject = "New Submission form";
+$email_subject = "New Submission form".$visitor_email;
 
 $email_body = "User Name: $name.\n".
                "User Email: $visitor_email.\n".
@@ -21,10 +22,10 @@ $email_body = "User Name: $name.\n".
 
 
                   $to = "sil18001@byui.edu";
-                  $headers = "Form $email_from \r\n";
+                  $headers = "Form .$email_from \r\n";
 
                   mail($to,$email_subject,$email_body,$headers);
 
                   header("Location: contact.html");
-
+}
 ?>
