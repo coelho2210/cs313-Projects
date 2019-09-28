@@ -12,11 +12,24 @@ $message = $_POST['message'];
 $emailTo = "coelho_ll@hotmail.com";
 $headers = "From: ".mailFrom;
 
-$txt = "You have received an email from ".$name.".\n\n".$message;
+$txt = "You have received an email from ".$name.". \n\n".$message;
 
 
-mail($emailTo,$subject,$txt,$headers);
-header("Location: contact.html?emailsend");
-
+$isSent = mail($emailTo,$subject,$txt,$headers);
+if($isSent)
+{
+    $stringLife = "YAY IT SENT!";
+    //header("Location: contact.html?emailsend");
+}
+else
+    $stringLife = "FAILED!";
+    //echo "Mail did not send! Sorry. Try again.";
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+ <body>
+     <?=$stringLife?>
+  </body>
+</html>
