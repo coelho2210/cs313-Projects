@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: linear-gradient(rgb(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)), url(image/programming03.jpg);
+    background-position: no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    font-family: sans-serif;
+
+}
+
+.contact {
+    margin-top: 100px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all 4s ease-in-out;
+}
+
+form {
+    margin-top: 50px;
+    transform: all 4s ease-in-out;
+}
+
+.form-control {
+    width: 550px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb black;
+    color: #fff;
+    font-size: 38px;
+    margin-bottom: 19px;
+}
+input{
+    height: 56px;
+}
+
+form .submit{
+background: #ff5722;
+border-color: transparent;
+color:#fff;
+font-size: 25px;
+font-weight: bold;
+letter-spacing: 1.5px;
+height: 56px;
+margin-top: 25px;
+}
+
+
+form .submit:hover{
+
+background-color: #f44328;
+cursor: pointer;
+}
+
