@@ -15,21 +15,7 @@ $headers = "From: ".$mailFrom;
 $txt = "You have received an email from ".$name.". \n\n".$message;
 
 
-$isSent = mail($emailTo,$subject,$txt,$headers);
-if($isSent)
-{
-    $stringLife = "YAY IT SENT!";
-    //header("Location: contact.html?emailsend");
-}
-else
-    $stringLife = "FAILED!".$emailTo.$subject.$txt.$headers;
-    //echo "Mail did not send! Sorry. Try again.";
+mail($emailTo,$subject,$txt,$headers);
+header("Location: contact.html?emailsend");
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
- <body>
-     <?=$stringLife?>
-  </body>
-</html>
