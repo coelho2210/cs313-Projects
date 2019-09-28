@@ -22,7 +22,7 @@ if($isSent)
     //header("Location: contact.html?emailsend");
 }
 else
-    $stringLife = "FAILED!";
+    $stringLife = "FAILED!".$emailTo.$subject.$txt.$headers;
     //echo "Mail did not send! Sorry. Try again.";
 }
 ?>
