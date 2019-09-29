@@ -76,12 +76,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #5D4954;
+  background-color: white;
   font-family: 'Poppins' , sans-serif;
 }
 
 .logo{
-  color: rgb(226, 226, 226);
+  color: rgb black;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
@@ -139,7 +139,7 @@ nav {
     right:0px;
     height:92vh; 
     top:8vh;
-    background-color: #5D4954;
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;

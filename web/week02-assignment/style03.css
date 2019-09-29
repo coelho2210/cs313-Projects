@@ -37,7 +37,7 @@ slide:nth-child(1){
 }
 
 slide:nth-child(2){
-  animation-delay: 2s;
+  animation-delay: 5s;
   background-image: url(image/image01.jpg);
   background-size:cover;
   background-position: center;
@@ -45,7 +45,7 @@ slide:nth-child(2){
 }
 
 slide:nth-child(3){
-  animation-delay: 5s;
+  animation-delay: 8s;
   background-image: url(image/image03.jpg);
   background-size:cover;
   background-position: center;
@@ -54,7 +54,7 @@ slide:nth-child(3){
 
 slide:nth-child(4){
   left:0%;
-  animation-delay: 8s;
+  animation-delay: 10s;
   background-image: url(image/image04.jpg);
   background-size:cover;
   background-position: center;
@@ -83,7 +83,7 @@ slide p{
 
 }
 .logo{
-  color: rgb(226, 226, 226);
+  color: rgb(15, 15, 15);
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
@@ -112,7 +112,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #5D4954;
+  background-color:whitesmoke;
   font-family: 'Poppins' , sans-serif;
 }
 
