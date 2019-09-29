@@ -100,3 +100,15 @@
     display: block;
   }
 }
+
+
+.introduction {
+  width: 450px;
+  background-image: transparent;
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  font-family: 'Century Gothic', sans-serif;
+}

@@ -9,6 +9,8 @@ $mailFrom = $_POST['email'];
 $message = $_POST['message'];
 
 
+mail($emailTo,$subject,$txt,$headers);
+
 $emailTo = "coelho_ll@hotmail.com";
 $headers = "From: ".$mailFrom;
 
