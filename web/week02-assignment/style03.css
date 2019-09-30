@@ -37,15 +37,15 @@ slide:nth-child(1){
 }
 
 slide:nth-child(2){
-  animation-delay: 5s;
-  background-image: url(image/image01.jpg);
+  animation-delay: 2s;
+  background-image: url(image/image05.jpg);
   background-size:cover;
   background-position: center;
 
 }
 
 slide:nth-child(3){
-  animation-delay: 8s;
+  animation-delay: 5s;
   background-image: url(image/image03.jpg);
   background-size:cover;
   background-position: center;
@@ -54,7 +54,7 @@ slide:nth-child(3){
 
 slide:nth-child(4){
   left:0%;
-  animation-delay: 10s;
+  animation-delay: 8s;
   background-image: url(image/image04.jpg);
   background-size:cover;
   background-position: center;
