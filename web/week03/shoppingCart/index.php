@@ -13,12 +13,12 @@ if ($action == NULL) {
 }
 switch ($action) {
 	case "add":
-		//if (!empty($_POST["quantity"])) {
+		if (!empty($_POST["quantity"])) {
 			foreach ($product_array as $key) {
 				if ($key["code"] == $_GET["code"]) {
 					$productByCode = $key;
 				}
-			//}
+			}
 
 
 
