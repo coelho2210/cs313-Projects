@@ -40,7 +40,7 @@
 							?>
 
 					<tr>
-						<td colspan="5" align=right><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
+						<td colspan="5" style="text-align:right"><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
 					</tr>
 				</tbody>
 			</table>		
