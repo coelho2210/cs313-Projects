@@ -85,7 +85,7 @@ switch($action) {
 	break;
 	case "empty":
 		//unset($_SESSION["cart_item"]);
-		include 'MyBrowser.php';
+		include 'myBrowser.php';
 	break;	
 	
 	default:
