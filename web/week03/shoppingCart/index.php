@@ -84,7 +84,7 @@ switch($action) {
 		include 'confirmOrder.php';
 	break;
 	case "empty":
-		unset($_SESSION["cart_item"]);
+		//unset($_SESSION["cart_item"]);
 		include 'MyBrowser.php';
 	break;	
 	
