@@ -31,15 +31,15 @@
 								?>
 							<tr>
 								<td style="text-align:left;border-bottom:#F0F0F0 1px solid;"><strong>
-									<?php echo $item["name"]; ?></strong></td>
+										<?php echo $item["name"]; ?></strong></td>
 								<td style="text-align:left;border-bottom:#F0F0F0 1px solid;">
-								<?php echo $item["code"]; ?></td>
+									<?php echo $item["code"]; ?></td>
 								<td style="text-align:right;border-bottom:#F0F0F0 1px solid;">
-								<?php echo $item["quantity"]; ?></td>
+									<?php echo $item["quantity"]; ?></td>
 								<td style="text-align:right;border-bottom:#F0F0F0 1px solid;">
-								<?php echo "$" . $item["price"]; ?></td>
+									<?php echo "$" . $item["price"]; ?></td>
 								<td style="text-align:center;border-bottom:#F0F0F0 1px solid;">
-								<a href="index.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction">Remove Item</a></td>
+									<a href="index.php?action=remove&code=<?php echo $item["code"]; ?>" class="btnRemoveAction">Remove Item</a></td>
 							</tr>
 						<?php
 								$item_total += ($item["price"] * $item["quantity"]);
