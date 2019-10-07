@@ -13,7 +13,7 @@
     <main>
 
         <div class="txt-headingout">
-            <p>Product Details</p>
+            <p>Detailed product information</p>
         </div>
         <section>
             <img src="<?php echo $itemArray['image']; ?>">
