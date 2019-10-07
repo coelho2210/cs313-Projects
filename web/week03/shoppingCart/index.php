@@ -2,7 +2,7 @@
 session_start();
 $product_array = array(
 	array('id' => "1", 'name' => "Soccer-Ball", 'code' => "3DcAM01", 'image' => "images/smallBall1.jpg", 'price' => "35.00", 'description' => " Practice and one day you will be the best!."),
-	array('id' => "2", 'name' => "Chuteira", 'code' => "USB02", 'image' => "images/smallChuteira.jpg", 'price' => "190.00", 'description' => "Be a professional!."),
+	array('id' => "2", 'name' => "Soccer-Shoes", 'code' => "USB02", 'image' => "images/smallChuteira.jpg", 'price' => "190.00", 'description' => "Be a professional!."),
 	array('id' => "3", 'name' => "Brazil soccer-Short", 'code' => "short03", 'image' => "images/smallShort1.jpg", 'price' => "210.00", 'description' => " Be a winner!! ")
 );
 
