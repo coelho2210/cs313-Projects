@@ -1,3 +1,68 @@
+
+
+input:focus~label,
+textarea:focus~label,
+select:focus~label {
+    color: #933;
+}
+
+input:checked~label {
+    font-weight: bold;
+}
+
+#frmChecnout {
+    width: 700px;
+    margin: 0 auto;
+}
+
+input[type="submit"] {
+    background-color: #ee3333;
+    color: #fff;
+    font-weight: 700;
+    padding: 15px 30px;
+}
+
+fieldset {
+    width: 25em;
+    margin: 10px 10px 30px 10px;
+    border: 0 none;
+}
+
+legend {
+    font-size: 1.2em;
+    width: 100%;
+    border-bottom: 1px dotted #99c;
+    font-weight: 700;
+}
+
+fieldset div {
+    margin: 4px 0;
+    padding: 10px 0;
+}
+
+input,
+textarea,
+select {
+    font-size: 1em;
+    padding: 2px 5px 4px;
+    border: 1px solid #cecece;
+    border-radius: 2px;
+}
+
+input:required:invalid, input:focus:invalid {
+    border: 1px solid #ff0000;
+    background-color: #ffcece;
+}
+
+input:required:valid, textarea:required:valid {
+    background: #d4f8d4;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f
+}
+
+
+
+
 body {
     
     font-family: calibri;
@@ -60,6 +125,32 @@ a.btnRemoveAction:visited {
     border-radius: 4px;
     margin: 0 5px;
 }
+
+input,
+textarea,
+select {
+    order: 2;
+    flex-basis: 15em;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+input:focus~label,
+textarea:focus~label,
+select:focus~label {
+    color: #933;
+}
+
+input:checked~label {
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: #ee3333;
+    color: #fff;
+    font-weight: 700;
+    padding: 15px 30px;
+}
+
 
 #btnEmpty {
     background-color: #ffffff;
@@ -141,71 +232,6 @@ a.btnRemoveAction:visited {
     padding: 2px 1px;
 }
 
-
-/* label state styles */
-
-input:focus~label,
-textarea:focus~label,
-select:focus~label {
-    color: #933;
-}
-
-input:checked~label {
-    font-weight: bold;
-}
-
-#frmChecnout {
-    width: 700px;
-    margin: 0 auto;
-}
-
-input[type="submit"] {
-    background-color: #ee3333;
-    color: #fff;
-    font-weight: 700;
-    padding: 15px 30px;
-}
-
-fieldset {
-    width: 25em;
-    margin: 10px 10px 30px 10px;
-    border: 0 none;
-}
-
-legend {
-    font-size: 1.2em;
-    width: 100%;
-    border-bottom: 1px dotted #99c;
-    font-weight: 700;
-}
-
-fieldset div {
-    margin: 4px 0;
-    padding: 10px 0;
-}
-
-input,
-textarea,
-select {
-    font-size: 1em;
-    padding: 2px 5px 4px;
-    border: 1px solid #cecece;
-    border-radius: 2px;
-}
-
-input:required:invalid, input:focus:invalid {
-    border: 1px solid #ff0000;
-    background-color: #ffcece;
-}
-
-input:required:valid, textarea:required:valid {
-    background: #d4f8d4;
-    box-shadow: 0 0 5px #5cd053;
-    border-color: #28921f
-}
-
-/* flexbox styles */
-
 fieldset div {
     display: flex;
     align-items: center;
@@ -218,31 +244,6 @@ label {
     padding-right: 0.5em;
     white-space: nowrap;
     cursor: pointer;
-}
-
-input,
-textarea,
-select {
-    order: 2;
-    flex-basis: 15em;
-    flex-grow: 0;
-    flex-shrink: 1;
-}
-input:focus~label,
-textarea:focus~label,
-select:focus~label {
-    color: #933;
-}
-
-input:checked~label {
-    font-weight: bold;
-}
-
-input[type="submit"] {
-    background-color: #ee3333;
-    color: #fff;
-    font-weight: 700;
-    padding: 15px 30px;
 }
 
 .row1, .row2 {
