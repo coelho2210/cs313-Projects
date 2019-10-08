@@ -14,7 +14,7 @@
 
         <div class="txt-headingout">
             <p>Detailed product information</p>
-        </div>s
+        </div>
         <section>
             <img src="<?php echo $itemArray['image']; ?>">
             <p>Description: <?php echo $itemArray['description']; ?></p>
