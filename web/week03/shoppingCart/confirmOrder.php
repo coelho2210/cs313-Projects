@@ -62,7 +62,7 @@
             }
             ?>
             </div>
-            <div class="txt-headingout"><a id="btnView" href="index.php?action=browse">Go Back</a></div>
+            <div class="txt-headingout"><a id="btnView" href="index.php?action=browser">Go Back</a></div>
     </main>
 </body>
 
