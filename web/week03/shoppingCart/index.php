@@ -33,9 +33,9 @@ switch ($action) {
 				if (in_array($itemArray, array_keys($_SESSION["cart_item"]))) {
 					foreach ($_SESSION["cart_item"] as $k => $v) {
 						if ($itemArray['code'] == $k) {
-							if (empty($_SESSION["cart_item"][$k]["quantity"])) {
+							/*if (empty($_SESSION["cart_item"][$k]["quantity"])) {
 								$_SESSION["cart_item"][$k]["quantity"] = 0;
-							}
+							}*/
 							$_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
 						}
 					}
