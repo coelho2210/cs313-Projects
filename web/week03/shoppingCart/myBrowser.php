@@ -38,7 +38,7 @@
 					<div class="product-item">
 						<form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
 							<div class="product-image">
-								<a href="index.php?action=Product_information&code=<?php echo $product_array[$key]["code"]; ?>">
+								<a href="index.php?action=productInformation&code=<?php echo $product_array[$key]["code"]; ?>">
 									<img src="<?php echo $product_array[$key]["image"]; ?>">
 								</a>
 							</div>
