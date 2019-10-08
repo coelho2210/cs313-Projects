@@ -36,7 +36,7 @@ switch ($action) {
 							/*if (empty($_SESSION["cart_item"][$k]["quantity"])) {
 								$_SESSION["cart_item"][$k]["quantity"] = 0;
 							}*/
-							$_SESSION["cart_item"][$k]["quantity"] += $_POST["quantity"];
+							$_SESSION["cart_item"][$k]["quantity"] += 2;//$_POST["quantity"];
 						}
 					}
 				} else {
