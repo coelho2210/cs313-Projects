@@ -30,7 +30,7 @@ switch ($action) {
 
 
 			if (!empty($_SESSION["cart_item"])) {
-				if (true)//in_array($itemArray, array_keys($_SESSION["cart_item"]))) {
+				if (true) {//in_array($itemArray, array_keys($_SESSION["cart_item"]))) {
 					foreach ($_SESSION["cart_item"] as $k => $v) {
 						if ($itemArray['code'] == $k) {
 							/*if (empty($_SESSION["cart_item"][$k]["quantity"])) {
