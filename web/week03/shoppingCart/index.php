@@ -67,7 +67,7 @@ switch ($action) {
 				$itemArray = $key;
 			}
 		}
-		include 'myDetails.php';
+		include 'productInformation.php';
 		break;
 	case "view":
 		include 'myCart.php';
