@@ -1,7 +1,7 @@
 DROP TABLE member;
 DROP TABLE product;
-DROP order;
-DROP category;
+DROP TABLE order;
+DROP TABLE category;
 
 CREATE TABLE member (
     member_id            Integer,
