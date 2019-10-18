@@ -20,7 +20,7 @@ $rating = $_POST["rating"];
 
 if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$siteId])) {
 	$stmt = $db->prepare(
-	"INSERT INTO rating (reviewer_name, description, rating, site_id) 
+	"INSERT INTO rating (reviewer_name, description, rating, park_id) 
 	VALUES (:name, :description, :rating, :siteId)");
 	
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
