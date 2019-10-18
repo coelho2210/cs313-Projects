@@ -63,7 +63,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	while ($stmt->fetch()) {
 		echo "<h2>" . $name . "</h2>";
 		echo "<h3>Description</h3>";
-		echo "<p>Location: " . $address . "</p>";
+		echo "<p>Address: " . $address . "</p>";
 		echo "<p>" . $description . "</p>";
 	}
 	?>
@@ -96,7 +96,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	
 	<?php
 	
-	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE site_id=:siteId");
+	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);
