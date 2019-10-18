@@ -53,17 +53,17 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<img src='" . $url . "'>";
 	}
 
-	$stmt = $db->prepare("SELECT park_name, address, description FROM park WHERE id=:siteId");
+	$stmt = $db->prepare("SELECT name, address, description FROM park WHERE id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);
-	$stmt->bindColumn(2, $location);
+	$stmt->bindColumn(2, $address);
 	$stmt->bindColumn(3, $description);
 	
 	while ($stmt->fetch()) {
 		echo "<h2>" . $name . "</h2>";
 		echo "<h3>Description</h3>";
-		echo "<p>Location: " . $location . "</p>";
+		echo "<p>Location: " . $address . "</p>";
 		echo "<p>" . $description . "</p>";
 	}
 	?>
