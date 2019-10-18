@@ -53,7 +53,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<img src='" . $url . "'>";
 	}
 
-	$stmt = $db->prepare("SELECT name, location, description FROM site WHERE id=:siteId");
+	$stmt = $db->prepare("SELECT park_name, address, description FROM park WHERE id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);

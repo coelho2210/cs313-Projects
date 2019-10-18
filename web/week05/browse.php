@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Midwest Outdoors</title>
+<title> Reting Parks</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -22,7 +22,7 @@
 			echo "<ul>";
 			$countyId = $county_row["id"];
 				
-			foreach ($db->query("SELECT * FROM site WHERE city_id=$countyId") as $site_row) {
+			foreach ($db->query("SELECT * FROM park WHERE city_id=$countyId") as $site_row) {
 				$siteId = $site_row["id"];
 				echo "<li><a href='site.php?siteId=$siteId'>" . $site_row["name"] . "</a></li>";
 			}
