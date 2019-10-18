@@ -10,27 +10,27 @@ if (!isset($siteId)) {
 
 $selected = array ();
 
-if (!isset($_SESSION["reviews_submitted"])) {
-	$_SESSION["reviews_submitted"] = $selected;
-}
+// if (!isset($_SESSION["reviews_submitted"])) {
+// 	$_SESSION["reviews_submitted"] = $selected;
+// }
 
-$name = $_POST["name"];
-$description = $_POST["description"];
-$rating = $_POST["rating"];
+// $name = $_POST["name"];
+// $description = $_POST["description"];
+// $rating = $_POST["rating"];
 
-if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$siteId])) {
-	$stmt = $db->prepare(
-	"INSERT INTO rating (reviewer_name, description, rating, park_id) 
-	VALUES (:name, :description, :rating, :siteId)");
+// if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$siteId])) {
+// 	$stmt = $db->prepare(
+// 	"INSERT INTO rating (reviewer_name, description, rating, park_id) 
+// 	VALUES (:name, :description, :rating, :siteId)");
 	
-	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
-	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
-	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
-	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
-	$stmt->execute();
+// 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
+// 	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+// 	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
+// 	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
+// 	$stmt->execute();
 	
-	$_SESSION["reviews_submitted"][$siteId] = true;
-}
+// 	$_SESSION["reviews_submitted"][$siteId] = true;
+// }
 ?>
 
 <html>
@@ -68,9 +68,9 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	}
 	?>
 	
-	<h3>Add a Review</h3>
+	<!-- <h3>Add a Review</h3> -->
 	
-	<?php 
+	<!-- <?php 
 	
 	if (!isset($_SESSION["reviews_submitted"][$siteId])) {
 		echo "
@@ -91,10 +91,10 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<p>A review has already been submitted. Thank you for your input!</p>";
 	}
 	?>
+	 -->
+	<!-- <h3>Reviews</h3> -->
 	
-	<h3>Reviews</h3>
-	
-	<?php
+	<!-- <?php
 	
 	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
@@ -116,7 +116,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 
 		echo "<br>" . $description . "</p>";
 	}
-	?>
+	?> -->
 </div>
 
 </body>
