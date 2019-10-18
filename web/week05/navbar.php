@@ -1,4 +1,4 @@
-<h1>Park Review!</h1>
+<h1> My Rating Park</h1>
 
 <ul class="nav">
   <li class="nav"><a href="home.php" class="nav">Home</a></li>
