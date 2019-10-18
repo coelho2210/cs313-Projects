@@ -14,7 +14,7 @@ $selected = array ();
 
 <html>
 <head>
-<title>Midwest Outdoors</title>
+<title>Rating Park</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
