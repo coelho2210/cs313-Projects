@@ -17,7 +17,7 @@
 		echo "<h3>" . $state_row["name"] . "</h3>";
 		$stateId = $state_row["id"];
 			
-		foreach ($db->query("SELECT * FROM park WHERE state_id=$stateId") as $county_row) {
+		foreach ($db->query("SELECT * FROM city WHERE state_id=$stateId") as $county_row) {
 			echo "<h4>" . $county_row["name"] . "</h4>";
 			echo "<ul>";
 			$countyId = $county_row["id"];
