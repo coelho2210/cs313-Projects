@@ -1,0 +1,67 @@
+body {
+	background-image: url("https://www.planwallpaper.com/static/images/nature_backgrounds_elegant_background_pictures_7072.jpg");
+	text-align: center;
+}
+
+h1, h2, h3, h4, p, li a {
+	color: black;
+	font-family: "Verdana";
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+p {
+	font-size: 20px;
+}
+
+div#back {
+	width: 80%;
+	margin-top: 0;
+	margin-bottom: 0;
+	background: rgba(238, 238, 238, 0.92);
+	padding: 14px;
+	height: auto;
+	display: inline-block;
+	text-align: left;
+}
+
+div.separate {
+	background-color: rgb(200, 0, 0);
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	background: rgba(215, 215, 215, 0.92);
+}
+
+li.nav {
+    float: left;
+}
+
+li a.nav {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgba(192, 192, 192, 0.92);
+}
+
+img {
+	float: right;
+	width: 350px;
+	margin-top: 30px;
+	margin-left: 30px;
+	clear: right;
+}
