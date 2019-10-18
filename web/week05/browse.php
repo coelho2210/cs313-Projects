@@ -8,7 +8,7 @@
 <div id="back">
 	<?php include 'navbar.php'; ?>
 
-	<h2>Browse</h2>
+	<h2>Browser</h2>
 	
 	<?php
 	include 'db_access.php';

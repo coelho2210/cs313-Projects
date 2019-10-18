@@ -1,3 +1,13 @@
+
+img {
+	float: right;
+	width: 350px;
+	margin-top: 30px;
+	margin-left: 30px;
+	clear: right;
+}
+
+
 body {
 	background-image: url("https://www.planwallpaper.com/static/images/nature_backgrounds_elegant_background_pictures_7072.jpg");
 	text-align: center;
@@ -58,10 +68,13 @@ li a:hover {
     background-color: rgba(192, 192, 192, 0.92);
 }
 
-img {
-	float: right;
-	width: 350px;
-	margin-top: 30px;
-	margin-left: 30px;
-	clear: right;
+div#back {
+	width: 80%;
+	margin-top: 0;
+	margin-bottom: 0;
+	background: rgba(238, 238, 238, 0.92);
+	padding: 14px;
+	height: auto;
+	display: inline-block;
+	text-align: left;
 }

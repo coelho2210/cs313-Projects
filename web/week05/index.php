@@ -1,14 +1,14 @@
 <html>
 <head>
-<title>Midwest Outdoors</title>
+<title>Rating Parks!</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 <div id="back">
 	<?php include 'navbar.php'; ?>
-	<h2>About Us</h2>
-	<p>This is a website for finding different outdoor locations around the midwest (Idaho, Wyoming, Montana) area. To start browsing, click on the "Browse" tab on the top.</p>
+	<h2>This Project</h2>
+	<p>This is a web application that allows the user to insert new data, update exintg data, and delete if  necessary. This aplication helped me to work with databse and PHP.</p>
 </div>
 
 </body>
