@@ -41,17 +41,7 @@ div#back {
 	text-align: left;
 }
 
-div.separate {
-	background-color: rgb(200, 0, 0);
-}
 
-ul.nav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-	background: rgba(215, 215, 215, 0.92);
-}
 
 li.nav {
     float: left;
@@ -65,7 +55,19 @@ li a.nav {
 }
 
 li a:hover {
-    background-color: rgba(192, 192, 192, 0.92);
+    background-color: rgba(245, 122, 122, 0.92);
+}
+
+div.separate {
+	background-color: rgb(200, 0, 0);
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	background: rgba(215, 215, 215, 0.92);
 }
 
 div#back {
