@@ -1,4 +1,4 @@
-<h1> My Rating Park</h1>
+<h1> My Rating Park - Webpage</h1>
 
 <ul class="nav">
   <li class="nav"><a href="home.php" class="nav">About this Project</a></li>
