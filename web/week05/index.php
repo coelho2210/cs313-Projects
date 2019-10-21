@@ -17,12 +17,12 @@
 		echo "<h3>" . $state_row["name"] . "</h3>";
 		$stateId = $state_row["id"];
 			
-		foreach ($db->query("SELECT * FROM city WHERE state_id=$stateId") as $county_row) {
-			echo "<h4>" . $county_row["name"] . "</h4>";
+		foreach ($db->query("SELECT * FROM city WHERE state_id=$stateId") as $city) {
+			echo "<h4>" . $city["name"] . "</h4>";
 			echo "<ul>";
-			$countyId = $county_row["id"];
+			$cityId = $city["id"];
 				
-			foreach ($db->query("SELECT * FROM park WHERE city_id=$countyId") as $site_row) {
+			foreach ($db->query("SELECT * FROM park WHERE city_id=$cityId") as $site_row) {
 				$siteId = $site_row["id"];
 				echo "<li><a href='site.php?siteId=$siteId'>" . $site_row["name"] . "</a></li>";
 			}
