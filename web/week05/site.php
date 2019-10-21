@@ -15,7 +15,7 @@ $selected = array ();
 <html>
 <head>
 <title>Rating Park</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
