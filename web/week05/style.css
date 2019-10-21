@@ -30,19 +30,6 @@ p {
 	font-size: 20px;
 }
 
-div#back {
-	width: 80%;
-	margin-top: 0;
-	margin-bottom: 0;
-	background: rgba(240, 186, 186, 0.92);
-	padding: 14px;
-	height: auto;
-	display: inline-block;
-	text-align: left;
-}
-
-
-
 li.nav {
     float: left;
 }
