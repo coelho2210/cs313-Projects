@@ -26,7 +26,7 @@
 				
 			foreach ($db->query("SELECT * FROM park WHERE city_id=$cityId") as $site_row) {
 				$park_id = $site_row["id"];
-				echo "<li><a href='site.php?park_id=$park_id'>" . $site_row["name"] . "</a></li>";
+				echo "<li><a href='park.php?park_id=$park_id'>" . $site_row["name"] . "</a></li>";
 			}
 				
 			echo "</ul>";
