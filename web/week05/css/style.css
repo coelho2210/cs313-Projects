@@ -1,4 +1,12 @@
 
+body {
+
+	text-align: center;
+	background-image: url("../picture/park.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
 img {
 	float: right;
 	width: 350px;
@@ -52,7 +60,7 @@ ul.nav {
 	background: rgba(248, 151, 151, 0.92);
 }
 
-div#back {
+div#background {
 	width: 80%;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -63,11 +71,3 @@ div#back {
 	text-align: left;
 }
 
-body {
-
-	text-align: center;
-	background-image: url("../picture/park.jpeg");
-	background-repeat: no-repeat;
-	background-size: cover;
-
-}
