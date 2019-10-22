@@ -1,5 +1,5 @@
 
-div#back {
+body {
 
 	text-align: center;
 	background-image: url("../picture/park.jpeg");
@@ -62,8 +62,6 @@ ul.nav {
 
 div#back {
 	width: 80%;
-	margin-top: 0;
-	margin-bottom: 0;
 	padding: 14px;
 	height: auto;
 	display: inline-block;

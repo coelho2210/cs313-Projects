@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<div id="back">
+<div id="back" style="margin-left: 10%; margin-top:10%;">
     <!--  This  will ADD THE NAVBAR FILE -->
 	<?php include 'navbar.php'; ?>
 
