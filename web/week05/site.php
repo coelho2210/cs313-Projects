@@ -8,7 +8,7 @@ if (!isset($siteId)) {
 	die("No site ID.");
 }
 
-$selected = array ();
+
 
 ?>
 
