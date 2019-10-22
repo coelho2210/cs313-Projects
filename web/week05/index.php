@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<div id="background">
+<div id="back">
     <!--  This  will ADD THE NAVBAR FILE -->
 	<?php include 'navbar.php'; ?>
 
