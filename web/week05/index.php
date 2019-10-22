@@ -12,7 +12,8 @@
 	
 	<?php
 	include 'db_access.php';
-		
+	
+	//Henrique, Lucas and Leo worked together to solve these code (loops)
 	foreach ($db->query("SELECT * FROM state") as $state_row) {
 		echo "<h3>" . $state_row["name"] . "</h3>";
 		$stateId = $state_row["id"];
@@ -23,8 +24,8 @@
 			$cityId = $city["id"];
 				
 			foreach ($db->query("SELECT * FROM park WHERE city_id=$cityId") as $site_row) {
-				$siteId = $site_row["id"];
-				echo "<li><a href='site.php?siteId=$siteId'>" . $site_row["name"] . "</a></li>";
+				$park_id = $site_row["id"];
+				echo "<li><a href='site.php?park_id=$park_id'>" . $site_row["name"] . "</a></li>";
 			}
 				
 			echo "</ul>";
