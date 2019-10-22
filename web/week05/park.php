@@ -17,7 +17,7 @@ if (!isset($park_id)) {
 </head>
 
 <body>
-<div id="back">
+<div id="background">
 	<?php 
 	include 'navbar.php';
 	
