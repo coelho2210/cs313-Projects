@@ -8,11 +8,6 @@ img {
 }
 
 
-body {
-
-	text-align: center;
-}
-
 h1, h2, h3, h4, p, li a {
 	color: black;
 	font-family: "Verdana";
@@ -66,4 +61,13 @@ div#back {
 	height: auto;
 	display: inline-block;
 	text-align: left;
+}
+
+body {
+
+	text-align: center;
+	background-image: url("/web/week05/picture/park.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }

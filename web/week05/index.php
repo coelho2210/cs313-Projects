@@ -6,6 +6,7 @@
 
 <body>
 <div id="back">
+    <!--  This  will ADD THE NAVBAR FILE -->
 	<?php include 'navbar.php'; ?>
 
 	<h2>Browser</h2>
@@ -13,7 +14,7 @@
 	<?php
 	include 'db_access.php';
 	
-	//Henrique, Lucas and Leo worked together to solve these code (loops)
+	// Henrique, Lucas and Leo worked together to solve these code (loops)
 	foreach ($db->query("SELECT * FROM state") as $state_row) {
 		echo "<h3>" . $state_row["name"] . "</h3>";
 		$stateId = $state_row["id"];
