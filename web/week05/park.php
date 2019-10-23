@@ -7,8 +7,6 @@ $park_id = $_GET["park_id"];
 if (!isset($park_id)) {
 	die("No site ID.");
 }
-
-
 $selected = array ();
 
 if (!isset($_SESSION["reviews_submitted"])) {
@@ -69,9 +67,9 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<p>" . $description . "</p>";
 	}
 	?>
-	<!-- <h3>Add a Review</h3> -->
+	 <h3>Add a Review</h3>
 	
-	<!-- <?php 
+	 <?php 
 	
 	if (!isset($_SESSION["reviews_submitted"][$siteId])) {
 		echo "
@@ -92,10 +90,10 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<p>A review has already been submitted. Thank you for your input!</p>";
 	}
 	?>
-	 -->
-	<!-- <h3>Reviews</h3> -->
+	 
+	 <h3>Reviews</h3> 
 	
-	<!-- <?php
+	 <?php
 	
 	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
@@ -117,7 +115,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 
 		echo "<br>" . $description . "</p>";
 	}
-	?> -->
+	?> 
 
 </div>
 
