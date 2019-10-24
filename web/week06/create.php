@@ -7,7 +7,7 @@ $user = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
 $pass = $_POST["pass"];
 if($pass.length < 7 || preg_match('\d+', $pass) == 0)
 {
-    header('Location: /social/create_user.php?fail=true');
+    header('Location: create_user.php?fail=true');
 }
 $passwordHash = password_hash($pass, PASSWORD_DEFAULT);
 try
