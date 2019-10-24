@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('dbConnect.php');
+require('db_access.php');
 $db = dbConnect();
 $display = filter_input(INPUT_POST, 'display', FILTER_SANITIZE_SPECIAL_CHARS);
 $user = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
