@@ -17,18 +17,18 @@ $name = $_POST["name"];
 $description = $_POST["description"];
 $rating = $_POST["rating"];
 
-if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$siteId])) {
+if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$park_id])) {
 	$stmt = $db->prepare(
 	"INSERT INTO rating (reviewer_name, description, rating, park_id) 
 	VALUES (:name, :description, :rating, :siteId)");
 	
-	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
+	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_STR);
 	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
 	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
 	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
 	$stmt->execute();
 	
-	$_SESSION["reviews_submitted"][$siteId] = true;
+	$_SESSION["reviews_submitted"][$park_id] = true;
 }
 
 ?>
@@ -71,9 +71,9 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	
 	 <?php 
 	
-	if (!isset($_SESSION["reviews_submitted"][$siteId])) {
+	if (!isset($_SESSION["reviews_submitted"][$park_id])) {
 		echo "
-		<form action='site.php?siteId=$siteId' method='post'>
+		<form action='site.php?siteId=$park_id' method='post'>
 			<p>
 			Name <input type='text' name='name'><br>
 			Description <input type='textarea' name='description'><br>
@@ -96,7 +96,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	 <?php
 	
 	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId");
-	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
+	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);
 	$stmt->bindColumn(2, $rating);
