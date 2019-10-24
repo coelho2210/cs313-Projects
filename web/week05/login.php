@@ -1,5 +1,6 @@
+  
 <?php
-
+session_start();
 ?>
 
 <!doctype html>
@@ -14,9 +15,25 @@
 </head>
 
 <body>
+<header>
+<h1>Login</h1>
+<hr>
+</header>
+<main class="login">
+    <div class="wrapper">
+    <h2 style="color:red;<?php if($_GET["fail"] != 'true'){ echo 'display:none';}?>">Username or Password incorrect</h2>
+    <form action="confirm.php" method="post">
+        Username:<br/>
+        <input type="text" name="username"><br/>
+        Password:<br/>
+        <input type="text" name="pass"><br/>
+        <input type="submit" value="Login">
+    </form>
 
-<h1>Comming Soon!!!</h1>
+        <a href="create_user.php">Create New User</a>
+    </div>
 
+</main>
 </body>
 
 </html>
