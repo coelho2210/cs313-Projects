@@ -73,7 +73,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	
 	if (!isset($_SESSION["reviews_submitted"][$park_id])) {
 		echo "
-		<form action='site.php?siteId=$park_id' method='post'>
+		<form action='park.php?park_id=$park_id' method='post'>
 			<p>
 			Name <input type='text' name='name'><br>
 			Description <input type='textarea' name='description'><br>
