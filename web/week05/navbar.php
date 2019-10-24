@@ -3,5 +3,5 @@
 <ul class="nav">
   <li class="nav"><a href="home.php" class="nav">About this Project</a></li>
   <li class="nav"><a href="index.php" class="nav">My Browser</a></li>
-  <li class="nav"><a href="login.php" class="nav">login</a></li>
+  
 </ul>
