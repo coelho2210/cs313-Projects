@@ -2,11 +2,12 @@
 session_start();
 
 include 'db_access.php';
-$park_id = $_GET["park_id"];
+$siteId = $_GET["siteId"];
 
-if (!isset($park_id)) {
+if (!isset($siteId)) {
 	die("No site ID.");
 }
+
 $selected = array ();
 
 if (!isset($_SESSION["reviews_submitted"])) {
@@ -30,22 +31,21 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	
 	$_SESSION["reviews_submitted"][$siteId] = true;
 }
-
 ?>
 
 <html>
 <head>
-<title>Rating Park</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Midwest Outdoors</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div id="back" style="margin-left: 10%; margin-top:10%;">
+<div id="back">
 	<?php 
 	include 'navbar.php';
 	
-	$stmt = $db->prepare("SELECT url FROM picture WHERE park_id=:park_id");
-	$stmt->bindValue(':park_id', $park_id, PDO::PARAM_STR);
+	$stmt = $db->prepare("SELECT url FROM picture WHERE park_id=:siteId");
+	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $url);
 	
@@ -53,8 +53,8 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<img src='" . $url . "'>";
 	}
 
-	$stmt = $db->prepare("SELECT name, address, description FROM park WHERE id=:park_id");
-	$stmt->bindValue(':park_id', $park_id, PDO::PARAM_STR);
+	$stmt = $db->prepare("SELECT name, address, description FROM park WHERE id=:siteId");
+	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);
 	$stmt->bindColumn(2, $address);
@@ -67,13 +67,14 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<p>" . $description . "</p>";
 	}
 	?>
-	 <h3>Add a Review</h3>
+	
+	 <h3>Add a Review</h3> 
 	
 	 <?php 
 	
 	if (!isset($_SESSION["reviews_submitted"][$siteId])) {
 		echo "
-		<form action='park.php?siteId=$siteId' method='post'>
+		<form action='site.php?siteId=$siteId' method='post'>
 			<p>
 			Name <input type='text' name='name'><br>
 			Description <input type='textarea' name='description'><br>
@@ -90,10 +91,10 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<p>A review has already been submitted. Thank you for your input!</p>";
 	}
 	?>
-	 
+	 -->
 	 <h3>Reviews</h3> 
 	
-	 <?php
+	<?php
 	
 	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
@@ -115,8 +116,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 
 		echo "<br>" . $description . "</p>";
 	}
-	?> 
-
+	?> -->
 </div>
 
 </body>
