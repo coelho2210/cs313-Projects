@@ -2,7 +2,7 @@
 session_start();
 
 require_once('db_access.php');
-$db=get_db();
+
 $park_id = $_GET["park_id"];
 
 if (!isset($park_id)) {

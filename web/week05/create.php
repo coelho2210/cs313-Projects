@@ -1,7 +1,7 @@
 <?php
 session_start();
 require('db_access.php');
-$db = get_db();
+
 $display = filter_input(INPUT_POST, 'display', FILTER_SANITIZE_SPECIAL_CHARS);
 $user = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
 $pass = $_POST["pass"];
