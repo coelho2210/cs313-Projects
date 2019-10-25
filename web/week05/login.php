@@ -55,8 +55,10 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     <title>User | Login</title>
 </title>
 <body>
-    <header><h1>Login</h1></header>  
+    <header><h1>Login</h1></header> 
+    <div id="back" style="margin-left: 10%; margin-top:10%;"> 
     <?php include 'navbar.php'; ?>  
+
     <div class="login">
         <form action='login.php' method='post'>
         <input type="text"  name="user" placeholder="Username"/><br>
