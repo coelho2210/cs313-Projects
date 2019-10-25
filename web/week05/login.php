@@ -68,5 +68,6 @@ if (isset($_POST['user']) && isset($_POST['pass']))
         </form>
 
     </div>
+</div>
 </body>
 </html>
