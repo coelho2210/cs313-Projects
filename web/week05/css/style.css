@@ -80,5 +80,10 @@ div#back {
     padding: 15px;
 }
 
+.white {
+    background-color: white;
+    padding: 15px 50px 15px 50px;
+    margin: 10%;
+    box-shadow: 0 4px 8px 0 rgb(1, 22, 44);
+}
 
-insert into member (user_name, password, email , first_name, last_name) Values('coelho', '$2y$10$1B0RojRcLIFckbZbkbMH7.ijWglL/gv6p7z1lLRevBgnq5zCvEwqq','coelho@hotmail.com', 'leo' ,'silva');

@@ -26,12 +26,12 @@
     $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
     require_once("db_access.php");
     $db = get_db();
-    $query = 'SELECT username FROM member';
+    $query = 'SELECT user_name FROM member';
     $stmt = $db -> prepare($query);
     $stmt -> execute();
     $names = $stmt -> fetchall(PDO::FETCH_ASSOC);
     foreach ($names as $name) {
-        $old_name = $name['username'];
+        $old_name = $name['user_name'];
         if ($user === $old_name) {
             header("location: sign_uSp.php");
             die();
