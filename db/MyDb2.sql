@@ -64,4 +64,28 @@ INSERT INTO picture (url, name, park_id) VALUES ('https://orem.org/wp-content/up
 --INSERT INTO picture (url, picture_name, park_id) VALUES ('https://www.yellowstonenationalparklodges.com/content/uploads/2017/04/YNP_emerald-pool-with-bison-roaming-in-background-445x290.jpg', 'Hot Spring 1', 2);
 INSERT INTO picture (url, name, park_id) VALUES ('https://img.theculturetrip.com/768x432/wp-content/uploads/2018/06/shutterstock_1091299760.jpg', 'swim', 2);
 INSERT INTO picture (url, name, park_id) VALUES ('https://img-aws.ehowcdn.com/700x/cdn.onlyinyourstate.com/wp-content/uploads/2016/08/Porter-Park-700x345.jpg', 'Porter', 3);
+
+
+
+
+
+CREATE TABLE member (
+	id SERIAL NOT NULL PRIMARY KEY,
+	user_name VARCHAR(80) NOT NULL UNIQUE,
+	password VARCHAR(300) NOT NULL UNIQUE,
+	email VARCHAR(200),
+	first_name VARCHAR(200),
+	Last_name VARCHAR(200)
+);
+
+
+
+
+
+
+
+
+
+
+
 --INSERT INTO picture (url, picture_name, park_id) VALUES ('https://c2.staticflickr.com/8/7374/9181508846_9c403b8e0b_b.jpg', 'Bears 2', 3);

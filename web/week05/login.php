@@ -12,7 +12,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
 
 
     // searching for password
-    $query = 'SELECT pass_word FROM game.member WHERE username = :username';
+    $query = 'SELECT password FROM member WHERE username = :username';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':username', $username);
     $result = $stmt->execute();
@@ -21,7 +21,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
         
         $row = $stmt->fetch();
         // get the password from database
-        $hashedPassword = $row['pass_word'];
+        $hashedPassword = $row['password'];
         
     
         //verify if stored password matches password in my database  
@@ -29,7 +29,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
         {
             $_SESSION['username'] = $username;
             
-            header("Location: main.php");
+            header("Location: park.php");
             die();
             
         }
