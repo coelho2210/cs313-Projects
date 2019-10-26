@@ -9,8 +9,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     
     //catch the database
     require_once("db_access.php");
-
-
+    $db = get_db();
     // searching for password
     $query = 'SELECT password FROM member WHERE user_name = :username';
     $stmt = $db->prepare($query);

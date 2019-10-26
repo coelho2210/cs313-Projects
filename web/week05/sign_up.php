@@ -12,8 +12,10 @@ session_start();
     <link rel="stylesheet" href="css/style.css">
     <title> Sing Up</title>
 </title>
+
+<header><h1>Sign Up</h1></header> 
 <body>
-    <header><h1>Sign Up</h1></header> 
+   
     <div id="back" style="margin-left: 10%; margin-top:10%;"> 
     <?php include 'navbar.php'; ?>  
 
