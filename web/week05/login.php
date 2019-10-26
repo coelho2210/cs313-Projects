@@ -54,8 +54,9 @@ if (isset($_POST['user']) && isset($_POST['pass']))
     <link rel="stylesheet" href="css/style.css">
     <title>User | Login</title>
 </title>
+<header><h1>Login</h1></header> 
 <body>
-    <header><h1>Login</h1></header> 
+    
     <div id="back" style="margin-left: 10%; margin-top:10%;"> 
     <?php include 'navbar.php'; ?>  
 
