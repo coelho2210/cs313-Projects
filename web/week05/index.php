@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> Reting Parks</title>
+<title> Rating Parks</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 
