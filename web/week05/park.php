@@ -23,8 +23,6 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	
 
 
-
-
 	$query = 'INSERT INTO rating (reviewer_name, description, rating, park_id) VALUES (:name, :description, :rating, :siteId)';
 	$stmt = $db->prepare($query);
 	

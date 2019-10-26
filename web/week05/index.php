@@ -12,19 +12,21 @@
 	<h2>Browser</h2>
 	
 	<?php
-	include 'db_access.php';
+	require_once('db_access.php');
+	$db = get_db();
+
 	
 	// Henrique, Lucas and Leo worked together to solve these code (loops)
-	foreach ($db->query("SELECT * FROM state") as $state_row) {
+	foreach ($db->query('SELECT * FROM state') as $state_row) {
 		echo "<h3>" . $state_row["name"] . "</h3>";
 		$stateId = $state_row["id"];
 			
-		foreach ($db->query("SELECT * FROM city WHERE state_id=$stateId") as $city) {
+		foreach ($db->query('SELECT * FROM city WHERE state_id=$stateId') as $city) {
 			echo "<h4>" . $city["name"] . "</h4>";
 			echo "<ul>";
 			$cityId = $city["id"];
 				
-			foreach ($db->query("SELECT * FROM park WHERE city_id=$cityId") as $site_row) {
+			foreach ($db->query('SELECT * FROM park WHERE city_id=$cityId') as $site_row) {
 				$park_id = $site_row["id"];
 				echo "<li><a href='park.php?park_id=$park_id'>" . $site_row["name"] . "</a></li>";
 			}
