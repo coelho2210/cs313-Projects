@@ -29,7 +29,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
         {
             $_SESSION['username'] = $username;
             
-            header("Location: park.php");
+            header("Location: index.php");
             die();
             
         }
