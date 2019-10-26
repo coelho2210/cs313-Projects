@@ -73,5 +73,10 @@ div#back {
 	display: inline-block;
 	text-align: left;
 }
-
+.login {
+    margin: 100px 300px 100px 300px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+}
 
