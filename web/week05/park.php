@@ -2,6 +2,7 @@
 session_start();
 
 require_once('db_access.php');
+$db = get_db();
 
 $park_id = $_GET["park_id"];
 
@@ -19,9 +20,13 @@ $description = $_POST["description"];
 $rating = $_POST["rating"];
 
 if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$park_id])) {
-	$stmt = $db->prepare(
-	"INSERT INTO rating (reviewer_name, description, rating, park_id) 
-	VALUES (:name, :description, :rating, :siteId)");
+	
+
+
+
+
+	$query = 'INSERT INTO rating (reviewer_name, description, rating, park_id) VALUES (:name, :description, :rating, :siteId)';
+	$stmt = $db->prepare($query);
 	
 	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_STR);
 	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
@@ -45,7 +50,9 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	<?php 
 	include 'navbar.php';
 	
-	$stmt = $db->prepare("SELECT url FROM picture WHERE park_id=:park_id");
+	
+	$query = 'SELECT url FROM picture WHERE park_id=:park_id';
+	$stmt = $db->prepare($query);
 	$stmt->bindValue(':park_id', $park_id, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $url);
@@ -54,7 +61,8 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<img src='" . $url . "'>";
 	}
 
-	$stmt = $db->prepare("SELECT name, address, description FROM park WHERE id=:park_id");
+	$query ='SELECT name, address, description FROM park WHERE id=:park_id';
+	$stmt = $db->prepare($query);
 	$stmt->bindValue(':park_id', $park_id, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);
@@ -95,8 +103,8 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	 <h3>Reviews</h3> 
 	
 	 <?php
-	
-	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId");
+	$query = 'SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId';
+	$stmt = $db->prepare($query);
 	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);
