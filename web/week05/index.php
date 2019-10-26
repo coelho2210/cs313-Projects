@@ -29,8 +29,9 @@
 			$stateId = $state_row["id"];
 
 
-			$query  = 'SELECT * FROM city WHERE state_id=$stateId';
+			$query  = 'SELECT * FROM city WHERE state_id=:stateId';
 			$stmt = $db->prepare($query);
+			$stmt->bindValue(':stateId', $stateId, PDO::PARAM_INT);
 			$stmt->execute();
 			$cities = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -41,8 +42,9 @@
 				$cityId = $city["id"];
 
 
-				$query  = 'SELECT * FROM park WHERE city_id=$cityId';
+				$query  = 'SELECT * FROM park WHERE city_id=:cityId';
 				$stmt = $db->prepare($query);
+				$stmt->bindValue(':cityId', $cityId, PDO::PARAM_INT);
 				$stmt->execute();
 				$parks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
