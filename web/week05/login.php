@@ -12,7 +12,7 @@ if (isset($_POST['user']) && isset($_POST['pass']))
 
 
     // searching for password
-    $query = 'SELECT password FROM member WHERE username = :username';
+    $query = 'SELECT password FROM member WHERE user_name = :username';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':username', $username);
     $result = $stmt->execute();
