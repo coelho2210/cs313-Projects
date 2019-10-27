@@ -40,20 +40,23 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
 <html lang="en">
 
 <head>
-    <title>
+    
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>User | Login</title>
-    </title>
+  
     <link rel="stylesheet" href="css/style.css">
 </head>
+
+
+<body>
+
 <header>
     <h1>Login</h1>
 </header>
 
-<body>
 
     <div id="back" style="margin-left: 10%; margin-top:10%;">
         <?php include 'navbar.php'; ?>

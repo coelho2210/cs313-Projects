@@ -7,19 +7,20 @@ session_start();
 <html lang="en">
 
 <head>
-    <title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/style.css">
-        <title> Sing Up</title>
-    </title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Sing Up</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<header>
-    <h1>Sign Up</h1>
-</header>
+
 
 <body>
+    <header>
+        <h1>Sign Up</h1>
+    </header>
 
     <div id="back" style="margin-left: 10%; margin-top:10%;">
         <?php include 'navbar.php'; ?>
