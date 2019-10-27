@@ -38,7 +38,11 @@ session_start();
                     <input type="text" name="lname" placeholder="Last Name"><br>
                     <input type="submit" value="Add Account"><br>
                 </form>
+
+                
             </div>
+
+            <h1> This Page is still under construction. Coming this week!!! Please, Go to  the Login page! </h1>
 </body>
 
 </html>
