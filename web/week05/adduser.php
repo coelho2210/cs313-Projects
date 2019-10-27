@@ -11,8 +11,7 @@ error_reporting(E_ALL);
     $fname = htmlspecialchars($_POST['fname']);
     $lname = htmlspecialchars($_POST['lname']);
 
-    var_dump($user, $pass, $cpass, $email, $cemail, $fname, $lname);
-    exit;
+   
     
     if (!isset($user) || $user == "") {
         header("location: sign_up.php");
