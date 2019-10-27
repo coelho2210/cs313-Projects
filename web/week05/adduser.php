@@ -55,13 +55,13 @@
             die();
         }
     }
-    $query = 'INSERT INTO member (user_name, password, first_name, last_name, email) VALUES (:user, :pass, :fname, :lname, :email)';
+    $query = 'INSERT INTO member (user_name, password, email, first_name, last_name) VALUES (:user, :pass, :email, :fname, :lname)';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':user', $user, PDO::PARAM_STR);
     $stmt->bindValue(':pass', $hashedPassword, PDO::PARAM_STR);
-    $stmt->bindValue(':fname', $fname, PDO::PARAM_STR);
-    $stmt->bindValue(':lname', $lname, PDO::PARAM_STR);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
+    $stmt->bindValue(':fname', $fname, PDO::PARAM_STR);
+    $stmt->bindValue(':lname', $lname, PDO::PARAM_STR); 
     $result = $stmt->execute();
   
    
