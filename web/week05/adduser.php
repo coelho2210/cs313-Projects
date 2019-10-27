@@ -27,6 +27,7 @@
         die();
     }
     $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
+   
     require_once("db_access.php");
     $db = get_db();
 
@@ -58,7 +59,7 @@
             die();
         }
     }
-    $query = 'INSERT INTO member (user_name, password, email, first_name, last_name) VALUES (:user, :pass, :email, :fname, :lname)';
+    $query = 'INSERT INTO member (user_name, password, email, first_name, Last_name) VALUES (:user, :pass, :email, :fname, :lname)';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':user', $user, PDO::PARAM_STR);
     $stmt->bindValue(':pass', $hashedPassword, PDO::PARAM_STR);
@@ -67,7 +68,6 @@
     $stmt->bindValue(':lname', $lname, PDO::PARAM_STR); 
     $result = $stmt->execute();
   
-   
     flush();
     header("Location:login.php");
     die();
