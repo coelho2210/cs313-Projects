@@ -26,14 +26,19 @@
     $hashedPassword = password_hash($pass, PASSWORD_DEFAULT);
     require_once("db_access.php");
     $db = get_db();
+
+
+
     $query = 'SELECT user_name FROM member';
     $stmt = $db -> prepare($query);
     $stmt -> execute();
     $names = $stmt -> fetchall(PDO::FETCH_ASSOC);
+    
+    
     foreach ($names as $name) {
         $old_name = $name['user_name'];
         if ($user === $old_name) {
-            header("location: sign_uSp.php");
+            header("location: sign_up.php");
             die();
         }
     }
@@ -58,6 +63,8 @@
     $stmt->bindValue(':lname', $lname, PDO::PARAM_STR);
     $stmt->bindValue(':email', $email, PDO::PARAM_STR);
     $result = $stmt->execute();
+  
+   
     flush();
     header("Location:login.php");
     die();
