@@ -94,7 +94,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		</form>";
 	}
 	else {
-		echo "<p>A review has already been submitted. Thank you for your input!</p>";
+		echo "<p>Thank you for your review. We appreciate your time and I hope to see you soon! </p>";
 	}
 	?>
 	 
