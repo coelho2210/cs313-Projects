@@ -71,3 +71,5 @@
     flush();
     header("Location:login.php");
     die();
+    
+    ?>
