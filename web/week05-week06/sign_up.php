@@ -25,8 +25,6 @@ session_start();
     <div id="back" style="margin-left: 10%; margin-top:10%;">
         <?php include 'navbar.php'; ?>
 
-        <form action="">
-
             <div class="white">
                 <form action="addUser.php" method="post">
                     <input type="text" name="uzer" placeholder="username"><br>
