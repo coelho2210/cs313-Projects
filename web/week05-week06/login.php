@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+$success = $_GET['success'];
+
+
 // check if I have user and password
 if (isset($_POST['user']) && isset($_POST['pass'])) {
     //store the user and password
@@ -65,14 +69,21 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
             <form action='login.php' method='post'>
                 <input type="text" name="user" placeholder="Username" /><br>
                 <input type="password" name="pass" placeholder="Password" /><br>
-                <p><?php if ($badlogin) {
+                <p><?php if ($badLogin) {
                         echo 'Your username or password is incorrect';
                     } ?></p>
                 <input type="submit" value="Login">
             </form>
 
         </div>
-
+            <?php
+            if($success) { 
+                echo "<div class='congrats'>";
+                echo "Congrats, your account has been created";
+                echo "</div>";
+            }
+           
+            ?>
 
 
     </div>

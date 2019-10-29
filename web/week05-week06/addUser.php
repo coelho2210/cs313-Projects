@@ -68,7 +68,7 @@
     $result = $stmt->execute();
   
     flush();
-    header("Location:login.php");
+    header("Location:login.php?success=True");
     die();
     
     ?>
