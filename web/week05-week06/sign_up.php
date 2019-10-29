@@ -22,7 +22,7 @@ session_start();
         <h1>Sign Up</h1>
     </header>
 
-    <div id="back" style="margin-left: 10%; margin-top:10%;">
+    <div id="back" style="margin-left: 10%; margin-top:10%;"></div>
         <?php include 'navbar.php'; ?>
 
             <div class="white">
@@ -34,7 +34,7 @@ session_start();
                     <input type="text" name="cemail" placeholder="confirm email"><br>
                     <input type="text" name="fname" placeholder="First Name"><br>
                     <input type="text" name="lname" placeholder="Last Name"><br>
-                    <input type="submit" value="Add Account"><br>
+                    <input type="submit" value="Submit"><br>
                 </form>
 
                 

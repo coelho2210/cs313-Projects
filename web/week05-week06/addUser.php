@@ -31,6 +31,7 @@
     require_once("db_access.php");
     $db = get_db();
 
+    
     $query = 'SELECT user_name FROM member';
     $stmt = $db -> prepare($query);
     $stmt -> execute();
