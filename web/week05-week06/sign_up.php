@@ -24,7 +24,7 @@ session_start();
 
     <div id="back" style="margin-left: 10%; margin-top:10%;">
         <?php include 'navbar.php'; ?>
-        </div>
+        
 
             <div class="white">
                 <form action="addUser.php" method="post">
@@ -40,8 +40,10 @@ session_start();
 
                 
             </div>
+    </div>
 
             <h1> This Page is still under construction. Coming this week!!! Please, Go to  the Login page! </h1>
+    
 </body>
 
 </html>
