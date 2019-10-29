@@ -22,8 +22,9 @@ session_start();
         <h1>Sign Up</h1>
     </header>
 
-    <div id="back" style="margin-left: 10%; margin-top:10%;"></div>
+    <div id="back" style="margin-left: 10%; margin-top:10%;">
         <?php include 'navbar.php'; ?>
+        </div>
 
             <div class="white">
                 <form action="addUser.php" method="post">
