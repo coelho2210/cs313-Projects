@@ -42,7 +42,6 @@ session_start();
             </div>
     </div>
 
-            <h1> This Page is still under construction. Coming this week!!! Please, Go to  the Login page! </h1>
     
 </body>
 

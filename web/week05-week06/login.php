@@ -73,7 +73,6 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
 
         </div>
 
-        <h2>Please, use "coelho" as username and "1234" as password.</h2>
 
 
     </div>
