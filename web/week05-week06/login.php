@@ -78,7 +78,7 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
         </div>
             <?php
             if($success) { 
-                echo "<div class='congrats'>";
+                echo "<div class='login'>";
                 echo "Congrats, your account has been created";
                 echo "</div>";
             }
