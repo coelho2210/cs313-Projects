@@ -57,11 +57,6 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
 
 <body>
 
-<header>
-    <h1>Login</h1>
-</header>
-
-
     <div id="back">
         <?php include 'navbar.php'; ?>
 

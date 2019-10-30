@@ -51,7 +51,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 </head>
 
 <body>
-<div id="back" style="margin-left: 10%; margin-top:10%;">
+<div id="back">
 	<?php 
 	include 'navbar.php';
 	
