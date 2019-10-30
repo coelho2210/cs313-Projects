@@ -8,8 +8,6 @@ if(!$_SESSION['username'])
 }
 
 
-
-
 require_once('db_access.php');
 $db = get_db();
 
