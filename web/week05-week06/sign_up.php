@@ -18,10 +18,7 @@ session_start();
 
 
 <body>
-    <header>
-        <h1>Sign Up</h1>
-    </header>
-
+    
     <div id="back">
         <?php include 'navbar.php'; ?>
         
