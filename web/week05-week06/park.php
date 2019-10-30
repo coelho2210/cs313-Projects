@@ -1,5 +1,14 @@
 <?php
+
 session_start();
+
+if(!$_SESSION['username'])
+{
+	header('Location:login.php');
+}
+
+
+
 
 require_once('db_access.php');
 $db = get_db();
