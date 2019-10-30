@@ -1,3 +1,15 @@
+
+
+<?php
+
+session_start();
+
+if(!$_SESSION['username'])
+{
+	header('Location:login.php');
+}
+?>
+
 <html>
 
 <head>
@@ -6,7 +18,7 @@
 </head>
 
 <body>
-	<div id="back" style="margin-left: 10%; margin-top:10%;">
+	<div id="back">
 		<!--  This  will ADD THE NAVBAR FILE -->
 		<?php include 'navbar.php'; ?>
 
