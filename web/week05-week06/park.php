@@ -89,7 +89,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "
 		<form action='park.php?park_id=$park_id' method='post'>
 			<p>
-			Name <input type='text' name='name'><br>
+			Name <input id='boxName' type='text' name='name'><br>
 			Description <input id='descriptionSize' type='textarea' name='description'><br>
 			&#9733 &#9734 &#9734 &#9734 &#9734 <input type='radio' name='rating' value=1><br>
 			&#9733 &#9733 &#9734 &#9734 &#9734 <input type='radio' name='rating' value=2><br>
