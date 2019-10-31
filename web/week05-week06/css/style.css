@@ -90,4 +90,8 @@ div#back {
 	box-shadow: 0 4px 8px 0 rgb(1, 22, 44);
 	background: rgba(236, 234, 202, 0.92);
 }
+#descriptionSize{
+	width: 250px;
+    height: 100px;
 
+}
