@@ -110,7 +110,6 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 			&#9733 &#9733 &#9733 &#9733 &#9734 <input type='radio' name='rating' value=4><br>
 			&#9733 &#9733 &#9733 &#9733 &#9733 <input type='radio' name='rating' value=5><br>
 			<button type='submit'>Submit</button>
-			<button type='submit'>Delete</button>
 			</p>
 		</form>";
 	}
@@ -122,13 +121,14 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	 <h3>Reviews</h3> 
 	
 	 <?php
-	$query = 'SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId';
+	$query = 'SELECT reviewer_name, rating, description, id FROM rating WHERE park_id=:siteId';
 	$stmt = $db->prepare($query);
 	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);
 	$stmt->bindColumn(2, $rating);
 	$stmt->bindColumn(3, $description);
+	$stmt->bindColumn(4, $id);
 	
 	while ($stmt->fetch()) {
 		echo "<p>" . $name . "</br>";
@@ -142,6 +142,10 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		}
 
 		echo "<br>" . $description . "</p>";
+		echo "<form action='deleteMypost.php' method='post'>";
+		echo "<input type='hidden' name='rating_id' value=$id>"; 
+		echo "<button type='submit'>Delete</button>";
+		echo "</form>";
 	}
 
 
