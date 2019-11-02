@@ -59,12 +59,12 @@ INSERT INTO park (id, name, description, address, city_id) VALUES (DEFAULT, 'Por
 
 INSERT INTO park (id, name, description, address, city_id) VALUES (DEFAULT, 'Water Park', 'Lets go swinning', '456 W 342 N', 1);
 
---INSERT INTO picture (url, picture_name, park_id) VALUES ('https://pandasthumb.org/uploads/2012/Ford.North%20Menan.jpg', 'Butte View 1', 1);
+INSERT INTO picture (url, name, park_id) VALUES ('https://www.orem.us/uploads/7/8/6/6/7866822/2380859.jpg?478', 'Orem02', 1);
 INSERT INTO picture (url, name, park_id) VALUES ('https://orem.org/wp-content/uploads/2016/06/7373224.jpg', 'Orem', 1);
---INSERT INTO picture (url, picture_name, park_id) VALUES ('https://www.yellowstonenationalparklodges.com/content/uploads/2017/04/YNP_emerald-pool-with-bison-roaming-in-background-445x290.jpg', 'Hot Spring 1', 2);
+INSERT INTO picture (url, name, park_id) VALUES ('https://bloximages.chicago2.vip.townnews.com/heraldextra.com/content/tncms/assets/v3/editorial/b/58/b58129ea-49b7-5e17-9563-53b8b905e818/589393865923d.image.jpg', 'swin02', 2);
 INSERT INTO picture (url, name, park_id) VALUES ('https://img.theculturetrip.com/768x432/wp-content/uploads/2018/06/shutterstock_1091299760.jpg', 'swim', 2);
 INSERT INTO picture (url, name, park_id) VALUES ('https://img-aws.ehowcdn.com/700x/cdn.onlyinyourstate.com/wp-content/uploads/2016/08/Porter-Park-700x345.jpg', 'Porter', 3);
-
+INSERT INTO picture (url, name, park_id) VALUES ('https://media.graytvinc.com/images/810*539/waterfall+potter+park+zoo.jpeg', 'Porter02', 3);
 
 
 

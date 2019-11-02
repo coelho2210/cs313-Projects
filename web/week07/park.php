@@ -16,6 +16,15 @@ if(!$_SESSION['username'])
 require_once('db_access.php');
 $db = get_db();
 
+
+$query = 'SELECT id  FROM member WHERE user_name = :member_name';
+$stmt = $db->prepare($query);
+$stmt->bindValue(':member_name', $_SESSION['username'], PDO::PARAM_STR);
+$stmt->execute();
+$member_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$member_id = $member_id[0]['id'];
+
+
 $park_id = $_GET["park_id"];
 
 if (!isset($park_id)) {
@@ -31,17 +40,19 @@ $name = $_POST["name"];
 $description = $_POST["description"];
 $rating = $_POST["rating"];
 
+
 if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$park_id])) {
 	
 
 
-	$query = 'INSERT INTO rating (reviewer_name, description, rating, park_id) VALUES (:name, :description, :rating, :siteId)';
+	$query = 'INSERT INTO rating (reviewer_name, description, rating, park_id, member_id) VALUES (:name, :description, :rating, :siteId,:member)';
 	$stmt = $db->prepare($query);
 	
-	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_STR);
+	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_INT);
 	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
 	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
 	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
+	$stmt->bindValue(':member', $member_id, PDO::PARAM_INT);
 	$stmt->execute();
 	
 	//$new_review_id = $db->lastInsertId('rating_id_seq');
@@ -104,7 +115,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 			&#9733 &#9733 &#9733 &#9733 &#9734 <input type='radio' name='rating' value=4><br>
 			&#9733 &#9733 &#9733 &#9733 &#9733 <input type='radio' name='rating' value=5><br>
 			<button type='submit'>Submit</button>
-			<button type='submit'>Delete</button>
+
 			</p>
 		</form>";
 	}
