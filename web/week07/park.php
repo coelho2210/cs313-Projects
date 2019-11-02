@@ -12,6 +12,7 @@ if(!$_SESSION['username'])
 	header('Location:login.php');
 }
 
+$username = $_SESSION['username'];
 
 require_once('db_access.php');
 $db = get_db();
@@ -33,15 +34,20 @@ $rating = $_POST["rating"];
 
 if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$park_id])) {
 	
+	$query = 'SELECT id FROM member WHERE user_name = :user';
+	$stmt = $db->prepare($query);	
+	$stmt->bindValue(':user', $username, PDO::PARAM_STR);
+	$stmt->execute();
+	$mem_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
-	$query = 'INSERT INTO rating (reviewer_name, description, rating, park_id) VALUES (:name, :description, :rating, :siteId)';
+	$query = 'INSERT INTO rating (reviewer_name, description, rating, park_id, member_id) VALUES (:name, :description, :rating, :siteId, :mem_id)';
 	$stmt = $db->prepare($query);
 	
 	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_STR);
 	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
 	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
 	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
+	$stmt->bindValue(':mem_id', $mem_id[0]['id'], PDO::PARAM_INT);
 	$stmt->execute();
 	
 	//$new_review_id = $db->lastInsertId('rating_id_seq');
@@ -138,19 +144,8 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<br>" . $description . "</p>";
 	}
 
-      
 
-
-
-
-
-
-
-	?> 
-
-
-
-	
+	?> 	
 
 </div>
 
