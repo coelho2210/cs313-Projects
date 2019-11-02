@@ -1,9 +1,9 @@
 <?php
 
 // debug coding
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 session_start();
 
@@ -128,11 +128,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	$stmt->bindColumn(1, $name);
 	$stmt->bindColumn(2, $rating);
 	$stmt->bindColumn(3, $description);
-	$stmt->bindColumn(4, $mem_id[0]['id']);
-	echo "var dump id<br>";
-	var_dump($mem_id[0]['id']);
-
-	
+		
 	while ($stmt->fetch()) {
 		echo "<p>" . $name . "</br>";
 		
@@ -145,18 +141,9 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		}
 
 		echo "<br>" . $description . "</p>";
-		// $query = 'SELECT user_name FROM member WHERE id = :mem_id';
-		// $stmt = $db->prepare($query);	
-		// $stmt->bindValue(':mem_id', $mem_id[0]['id'], PDO::PARAM_INT);
-		// $stmt->execute();
-		// $mem_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		// echo "<br>";
-		// var_dump($username);
-		// echo "<br>";
-		// var_dump($mem_name);
-		// echo "<br>";
+	
         echo "<form action='deleteMypost.php' method='post'>";
-		echo "<input type='hidden' name='rating_id' value='".$mem_id[0]['id']."'>";
+		echo "<input type='hidden' name='rating_id' value='id'>";
 		echo "<button type='submit'>Delete</button>";
         echo "</form>";
 	}
