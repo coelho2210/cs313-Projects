@@ -43,7 +43,10 @@ CREATE TABLE rating (
 	rating INTEGER NOT NULL,
 	description VARCHAR(200),
 	park_id INTEGER,
-	FOREIGN KEY (park_id) REFERENCES park(id)
+	member_id INTEGER,
+	FOREIGN KEY (park_id) REFERENCES park(id),
+	FOREIGN KEY (member_id) REFERENCES member(id)
+
 );
 
 INSERT INTO "state" (id, name) VALUES (DEFAULT, 'Idaho');
