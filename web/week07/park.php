@@ -147,7 +147,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<br>" . $description . "</p>";
 		$query = 'SELECT user_name FROM member WHERE id = :mem_id';
 		$stmt = $db->prepare($query);	
-		$stmt->bindValue(':mem_id', $id, PDO::PARAM_INT);
+		$stmt->bindValue(':mem_id', $mem_id[0]['id'], PDO::PARAM_INT);
 		$stmt->execute();
 		$mem_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		echo "<br>";
