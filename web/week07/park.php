@@ -128,9 +128,10 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	$stmt->bindColumn(1, $name);
 	$stmt->bindColumn(2, $rating);
 	$stmt->bindColumn(3, $description);
-	$stmt->bindColumn(4, $id);
-	echo "the id's<br>";
-	var_dump($id);
+	$stmt->bindColumn(4, $mem_id[0]['id']);
+	echo "var dump id<br>";
+	var_dump($mem_id[0]['id']);
+
 	
 	while ($stmt->fetch()) {
 		echo "<p>" . $name . "</br>";
@@ -155,7 +156,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		var_dump($mem_name);
 		echo "<br>";
         echo "<form action='deleteMypost.php' method='post'>";
-		echo "<input type='hidden' name='rating_id' value=$id>";
+		echo "<input type='hidden' name='rating_id' value='".$mem_id[0]['id']."'>";
 		echo "<button type='submit'>Delete</button>";
         echo "</form>";
 	}
