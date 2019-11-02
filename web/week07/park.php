@@ -42,9 +42,6 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
 	$stmt->execute();
 	$new_review_id = $db->lastInsertId('rating_id_seq');
-
-	var_dump($new_review_id);
-	exit;
 	
 	$_SESSION["reviews_submitted"][$park_id] = true;
 }
@@ -115,13 +112,24 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	 <h3>Reviews</h3> 
 	
 	 <?php
-	$query = 'SELECT reviewer_name, rating, description FROM rating WHERE park_id=:siteId';
+	$query = 'SELECT id, reviewer_name, rating, description FROM rating WHERE park_id=:siteId AND id=:rating_id';
 	$stmt = $db->prepare($query);
+	$stmt->bindValue('rating_id', $new_review_id, PDO::PARAM_INT);
 	$stmt->bindValue(':siteId', $park_id, PDO::PARAM_STR);
+	
 	$stmt->execute();
-	$stmt->bindColumn(1, $name);
-	$stmt->bindColumn(2, $rating);
-	$stmt->bindColumn(3, $description);
+
+	var_dump($stmt);
+	exit;
+
+	// $stmt->bindColumn(1, $name);
+	// $stmt->bindColumn(2, $rating);
+	// $stmt->bindColumn(3, $description);
+	$stmt->bindColumn(1, $id);
+	$stmt->bindColumn(2, $name);
+	$stmt->bindColumn(3, $rating);
+	$stmt->bindColumn(4, $description);
+
 	
 	while ($stmt->fetch()) {
 		echo "<p>" . $name . "</br>";
