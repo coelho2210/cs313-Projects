@@ -129,6 +129,8 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	$stmt->bindColumn(2, $rating);
 	$stmt->bindColumn(3, $description);
 	$stmt->bindColumn(4, $id);
+	echo "the id's<br>";
+	var_dump($id);
 	
 	while ($stmt->fetch()) {
 		echo "<p>" . $name . "</br>";
