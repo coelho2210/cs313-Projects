@@ -6,5 +6,7 @@ $query ='delete from rating order by id desc limit 1';
 $stmt = $db->prepare($query);
 $stmt->execute();
 
+header ('Location: park.php');
+
 
 ?>
