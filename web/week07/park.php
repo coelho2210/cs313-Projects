@@ -1,7 +1,9 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
+//debug coding
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 session_start();
 
@@ -41,11 +43,10 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
 	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
 	$stmt->execute();
-	$new_review_id = $db->lastInsertId('rating_id_seq');
-
-
 	
-	$_SESSION["reviews_submitted"][$park_id] = true;
+	//$new_review_id = $db->lastInsertId('rating_id_seq');
+	
+	//$_SESSION["reviews_submitted"][$park_id] = true;
 }
 
 ?>
@@ -103,7 +104,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 			&#9733 &#9733 &#9733 &#9733 &#9734 <input type='radio' name='rating' value=4><br>
 			&#9733 &#9733 &#9733 &#9733 &#9733 <input type='radio' name='rating' value=5><br>
 			<button type='submit'>Submit</button>
-			<a href='delete.php'>DELETE LAST ELEMENT<a>
+			<button type='submit'>Delete</button>
 			</p>
 		</form>";
 	}
