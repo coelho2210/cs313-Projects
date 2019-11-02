@@ -143,7 +143,8 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 
 		echo "<br>" . $result[$x]['description'] . "</p>";
 	
-        echo "<form action='deleteMypost.php' method='post'>";
+		echo "<form action='deleteMypost.php' method='post'>";
+		echo "<input type='hidden' name='park_id' value='".$result[$x]['park_id']."'>";
 		echo "<input type='hidden' name='rating_id' value='".$result[$x]['id']."'>";
 		echo "<button type='submit'>Delete</button>";
 		echo "</form>";
