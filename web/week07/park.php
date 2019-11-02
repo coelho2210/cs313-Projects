@@ -148,10 +148,10 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		// $stmt->execute();
 		// $mem_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            // echo "<form action='deleteMypost.php' method='post'>";
-            // echo "<input type='hidden' name='rating_id' value=$id>";
-            // echo "<button type='submit'>Delete</button>";
-            // echo "</form>";
+        echo "<form action='deleteMypost.php' method='post'>";
+		echo "<input type='hidden' name='rating_id' value=$id>";
+		echo "<button type='submit'>Delete</button>";
+        echo "</form>";
 	}
 
 
