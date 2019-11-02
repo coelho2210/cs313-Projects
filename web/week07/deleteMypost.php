@@ -16,6 +16,6 @@
     $stmt = $db->prepare($query);
     $stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
     $stmt->execute();
-    header("Location: park.php#return");
+    header("Location: park.php");
     die();
 ?>
