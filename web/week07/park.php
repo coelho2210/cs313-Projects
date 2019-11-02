@@ -128,7 +128,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	$stmt->bindColumn(1, $name);
 	$stmt->bindColumn(2, $rating);
 	$stmt->bindColumn(3, $description);
-	$stmt->bindColumn(4, $id);
+	//$stmt->bindColumn(4, $id);
 	
 	while ($stmt->fetch()) {
 		echo "<p>" . $name . "</br>";
@@ -142,18 +142,16 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		}
 
 		echo "<br>" . $description . "</p>";
-		$query = 'SELECT user_name FROM member WHERE id = :mem_id';
-		$stmt = $db->prepare($query);	
-		$stmt->bindValue(':mem_id', $id, PDO::PARAM_INT);
-		$stmt->execute();
-		$mem_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		// $query = 'SELECT user_name FROM member WHERE id = :mem_id';
+		// $stmt = $db->prepare($query);	
+		// $stmt->bindValue(':mem_id', $id, PDO::PARAM_INT);
+		// $stmt->execute();
+		// $mem_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-		if ($username == $mem_name[0]['user_name']) {
-            echo "<form action='deleteMypost.php' method='post'>";
-            echo "<input type='hidden' name='rating_id' value=$id>";
-            echo "<button type='submit'>Delete</button>";
-            echo "</form>";
-        }
+            // echo "<form action='deleteMypost.php' method='post'>";
+            // echo "<input type='hidden' name='rating_id' value=$id>";
+            // echo "<button type='submit'>Delete</button>";
+            // echo "</form>";
 	}
 
 
