@@ -11,8 +11,8 @@
     }
     require_once("db_access.php");
     $db = get_db();
-    $post_id = $_POST['post_id'];
-    $query = 'DELETE FROM rating WHERE park_id=:siteId';
+    $post_id = $_POST['rating_id'];
+    $query = 'DELETE FROM rating WHERE id=:post_id';
     $stmt = $db->prepare($query);
     $stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
     $stmt->execute();
