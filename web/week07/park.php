@@ -38,6 +38,10 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
 	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
 	$stmt->execute();
+	$new_review_id = $db->lastInsertId(id_seq);
+
+	var_dump($new_review_id);
+	exit;
 	
 	$_SESSION["reviews_submitted"][$park_id] = true;
 }
