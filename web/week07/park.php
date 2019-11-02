@@ -142,10 +142,18 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		}
 
 		echo "<br>" . $description . "</p>";
-		echo "<form action='deleteMypost.php' method='post'>";
-		echo "<input type='hidden' name='rating_id' value=$id>"; 
-		echo "<button type='submit'>Delete</button>";
-		echo "</form>";
+		$query = 'SELECT user_name FROM member WHERE id = :mem_id';
+		$stmt = $db->prepare($query);	
+		$stmt->bindValue(':mem_id', $id, PDO::PARAM_INT);
+		$stmt->execute();
+		$mem_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		if ($username == $mem_name[0]['user_name']) {
+            echo "<form action='deleteMypost.php' method='post'>";
+            echo "<input type='hidden' name='rating_id' value=$id>";
+            echo "<button type='submit'>Delete</button>";
+            echo "</form>";
+        }
 	}
 
 
