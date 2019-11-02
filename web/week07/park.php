@@ -119,8 +119,8 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	
 	$stmt->execute();
 
-	var_dump($stmt);
-	exit;
+	// var_dump($stmt);
+	// exit;
 
 	// $stmt->bindColumn(1, $name);
 	// $stmt->bindColumn(2, $rating);
