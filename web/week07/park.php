@@ -128,25 +128,26 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	$stmt->bindColumn(1, $name);
 	$stmt->bindColumn(2, $rating);
 	$stmt->bindColumn(3, $description);
-	var_dump($stmt->fetch());
+	$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$x = 0;
+	while ($x < count($result)) {
+		echo "<p>" . $result[$x]['reviewer_name'] . "</br>";
 		
-	while ($stmt->fetch()) {
-		echo "<p>" . $name . "</br>";
-		
-		for ($i = 0; $i < $rating; $i++) {
+		for ($i = 0; $i < $result[$x]['rating']; $i++) {
 			echo "&#9733";
 		}
 		
-		for ($i = 5; $i > $rating; $i--) {
+		for ($i = 5; $i > $result[$x]['rating']; $i--) {
 			echo "&#9734";
 		}
 
-		echo "<br>" . $description . "</p>";
+		echo "<br>" . $result[$x]['description'] . "</p>";
 	
         echo "<form action='deleteMypost.php' method='post'>";
-		echo "<input type='hidden' name='rating_id' value='id'>";
+		echo "<input type='hidden' name='rating_id' value='".$result[$x]['id']."'>";
 		echo "<button type='submit'>Delete</button>";
-        echo "</form>";
+		echo "</form>";
+		$x++;
 	}
 
 
